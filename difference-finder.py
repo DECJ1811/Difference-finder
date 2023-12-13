@@ -1,7 +1,7 @@
 from PIL import Image
 #original image and image with difference
-input_image=Image.open("C:\\Users\\15cd005la\\Downloads\\original.PNG")
-difference=Image.open("C:\\Users\\15cd005la\\Downloads\\different.PNG")
+input_image=Image.open(#path to the original image)
+difference=Image.open(#path to the image with differences)
 
 
 
@@ -25,4 +25,4 @@ for i in range(width2):
         grayscale = (0.299 * r2 + 0.587 * g2 + 0.114 * b2)
         if sum_of_colors2 not in range(sum_of_colors1-110, sum_of_colors1+110):
             difference_map[i, j]=(int(grayscale), int(grayscale), int(grayscale))
-difference.save("C:\\Users\\15cd005la\\Downloads\\diferences.PNG", format="png")
+difference.save(#where do you want to save the image +"diferences.PNG", format="png")
